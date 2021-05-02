@@ -1,0 +1,1 @@
+(self.webpackChunk=self.webpackChunk||[]).push([[250],{7250:(e,l,t)=>{"use strict";t.r(l),t.d(l,{default:()=>c});var a=t(7294),n=t(1636);const c=function(){return a.createElement("div",null,a.createElement("h1",null,"Hello ","This is React Page"),a.createElement(n.ZQ,{href:"/"},"Back to Laravel blade"))}}}]);
