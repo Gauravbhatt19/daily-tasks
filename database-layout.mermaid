@@ -1,0 +1,79 @@
+classDiagram
+
+class personal_access_tokens {
+    id~biginteger:20,unsigned~ Primary
+    tokenable_type~varchar:191~ Not_Null
+    tokenable_id~biginteger:20,unsigned~ Not_Null
+    name~varchar:191~ Not_Null
+    token~varchar:64~ Unique
+    abilities~text~ Nullable
+    last_used_at~timestamp~ Nullable
+    created_at~timestamp~ Nullable
+    updated_at~timestamp~ Nullable
+}
+
+class users {
+    id~biginteger:20,unsigned~ Primary
+    first_name~varchar:191~ Not_Null
+    last_name~varchar:191~ Not_Null
+    email~varchar:191~ Unique ~ Nullable
+    phone_number~varchar~Unique ~ Nullable
+    email_verified_at~timestamp~ Nullable
+    password~varchar:191~ Not_Null
+    two_factor_secret~text~ Nullable
+    two_factor_recovery_codes~text~ Nullable
+    rememberToken~varchar:100~ Nullable
+    created_at~timestamp~ Nullable
+    updated_at~timestamp~ Nullable
+}
+
+class sessions {
+    id~varchar:191~ Primary
+    user_id~biginteger:20,unsigned~ Nullable
+    ip_address~varchar:45~ Nullable
+    user_agent~text~ Nullable
+    payload~text~ Not_Null
+    last_activity~int:11~ Not_Null
+}
+sessions: foreign(user_id)->references(users.id)
+
+class password_resets {
+    email~varchar:191~ Not_Null
+    token~varchar:191~ Not_Null
+    created_at~timestamp~ Nullable
+}
+password_resets: foreign(email)->references(users.email)
+
+class tasks {
+    id~biginteger:20,unsigned~Primary
+    name~varchar:191~Not_Null
+    description~text~Not_Null
+    created_at~timestamp~Nullable
+    updated_at~timestamp~Nullable
+    completed_at~timestamp~Nullable
+}
+
+class model_has_tasks {
+    id~biginteger:20,unsigned~Primary
+    model_id~integer~Not_Null
+    model_type~string~Not_Null
+    task_id~integer~Not_Null
+    created_at~timestamp~Nullable
+    updated_at~timestamp~Nullable
+}
+
+class migrations {
+    default
+}
+
+class failed_jobs {
+    default
+}
+
+model_has_tasks: foreign(task_id)->references(tasks.id)
+model_has_tasks: foreign(model_id)->references(users.id)
+
+users --> password_resets : One-Many
+users --> sessions : One-Many
+tasks --> model_has_tasks : One-One
+users --> model_has_tasks : Many-Many
