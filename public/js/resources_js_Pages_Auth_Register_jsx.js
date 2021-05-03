@@ -1,9 +1,9 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Home_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Auth_Register_jsx"],{
 
-/***/ "./resources/js/Pages/Home.jsx":
-/*!*************************************!*\
-  !*** ./resources/js/Pages/Home.jsx ***!
-  \*************************************/
+/***/ "./resources/js/Pages/Auth/Register.jsx":
+/*!**********************************************!*\
+  !*** ./resources/js/Pages/Auth/Register.jsx ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -19,8 +19,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Home = function Home() {
-  var foo = "This is React Page";
+var Register = function Register() {
+  var foo = "This is React Register Page";
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h1", {
       children: ["Hello ", foo]
@@ -31,7 +31,7 @@ var Home = function Home() {
   });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Register);
 
 /***/ })
 

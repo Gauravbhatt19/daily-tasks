@@ -15,6 +15,9 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        <!-- Laravel Ziggy Routes Helper for Frontend-->
+        @routes
     </head>
     <body class="font-sans antialiased">
         @inertia
