@@ -15,11 +15,9 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
+Auth::routes();
 
-Route::get('/home', function () {
-    return Inertia::render('Home');
-});
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

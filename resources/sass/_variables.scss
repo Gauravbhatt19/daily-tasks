@@ -1,0 +1,147 @@
+// Body
+$body-bg: #fff;
+
+// Typography
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$gray: #828282;
+$gray-light: #F2F2F2;
+$picton-blue: #2FB5F2;
+
+//Theme Colors
+$theme-colors: (
+    'blue' : $blue,
+    'indigo' : $indigo,
+    'purple' : $purple,
+    'pink' : $pink,
+    'red' : $red,
+    'orange' : $orange,
+    'yellow' : $yellow,
+    'green' : $green,
+    'teal' : $teal,
+    'cyan' : $cyan,
+    'gray' : $gray,
+    'primary' : $picton-blue,
+    'gray-light' : $gray-light
+);
+
+//Sizes
+$sizes: (
+    'auto': auto,
+    '25p': 25%,
+    '33p': 33%,
+    '38p': 38%,
+    '40p': 40%,
+    '42p': 42%,
+    '50p': 50%,
+    '70p': 70%,
+    '50p-6': calc(50% - 6px),
+    '90p': 90%,
+    '100p': 100%,
+    'half': 50%,
+    'full': 100%,
+    '38': 38px,
+    '70': 70px,
+    '123': 123px,
+    '132': 132px,
+    '290': 290px,
+    '360': 360px,
+    '654': 654px,
+);
+
+//Font Sizes
+$font-sizes: (
+    '8': 8px,
+    '10': 10px,
+    '12': 12px,
+    '14': 14px,
+    '16': 16px,
+    '18': 18px,
+    '20': 20px,
+    '22': 22px,
+    '24': 24px,
+    '28': 28px,
+    '30': 30px,
+    '36': 36px,
+    '40': 40px,
+    '46': 46px,
+    '48': 48px,
+    '60': 60px,
+    '72': 72px,
+    '80': 80px,
+    '140': 140px,
+);
+
+//Line Heights
+$line-heights: (
+    'half' : 0.5,
+    'none' : 1,
+    'tight': 1.25,
+    'normal': 1.5,
+    'loose': 2,
+    '10': 10px,
+    '12': 12px,
+    '14': 14px,
+    '15': 15px,
+    '16': 16px,
+    '18': 18px,
+    '19': 19px,
+    '20': 20px,
+    '22': 22px,
+    '24': 24px,
+    '25': 25px,
+    '28': 28px,
+    '30': 30px,
+    '44': 44px,
+    '45': 45px,
+    '60': 60px,
+    '110': 110px,
+);
+
+//Spacers
+$spacer: 12px;
+$spacers: (
+    0: 0,
+    0\.5: ($spacer * 0.25), // 3px
+    1: ($spacer * 0.5), // 6px
+    2: ($spacer * 1), // 12px
+    3: ($spacer * 1.5), // 18px
+    4: ($spacer * 2), // 24px
+    5: ($spacer * 2.5), // 30px
+    6: ($spacer * 3), //36px
+    7: ($spacer * 3.5), //42px
+    8: ($spacer * 4), //48px
+    9: ($spacer * 4.5), //54px
+    10: ($spacer * 5), //60px
+    13: ($spacer * 6.5), //78px
+    14: ($spacer * 7), //84px
+    15: ($spacer * 7.5), //90px
+    17: ($spacer * 8.5), //102px
+    18: ($spacer * 9), //108px
+    20: ($spacer * 10), //120px
+    21: ($spacer * 125/12), //125px
+);
+
+//Rounded
+$rounded: (
+    '0': 0,
+    '6': 6px,
+    6\.5: 6.5px,
+    '12': 12px,
+    '24': 24px,
+    'half': 50%,
+    'tablet': 500px,
+);

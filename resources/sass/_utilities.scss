@@ -1,0 +1,43 @@
+.section-heading {
+	@extend .font-roboto-bold, .fz-16, .mt-6;
+}
+
+.input-text {
+	@extend .w-290, .shadow-sm, .h-38, .px-2, .m-2, .rounded-0;
+
+	&::placeholder {
+		@extend .fz-16, .font-roboto-regular, .text-gray;
+	}
+	&:focus {
+		@extend .border-primary;
+	}
+
+	outline-color: $picton-blue;
+	border: 1px solid $gray;
+}
+
+
+@each $size,
+$value in $font-sizes {
+    .fz-#{$size} {
+        font-size: $value !important;
+    }
+}
+
+.border-1 {
+	border: 1px solid !important;
+}
+
+.shadow-md {
+    box-shadow: 0 0.125rem 0.25rem $gray !important;
+}
+
+.w-screen {
+	width: 100vw !important;
+}
+
+@import 'utilities/sm';
+@import 'utilities/md';
+@import 'utilities/lg';
+@import 'utilities/xl';
+@import 'utilities/hd';
