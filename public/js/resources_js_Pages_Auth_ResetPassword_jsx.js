@@ -1,9 +1,9 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Auth_Register_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Auth_ResetPassword_jsx"],{
 
-/***/ "./resources/js/Pages/Auth/Register.jsx":
-/*!**********************************************!*\
-  !*** ./resources/js/Pages/Auth/Register.jsx ***!
-  \**********************************************/
+/***/ "./resources/js/Pages/Auth/ResetPassword.jsx":
+/*!***************************************************!*\
+  !*** ./resources/js/Pages/Auth/ResetPassword.jsx ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -33,12 +33,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var Register = function Register() {
+var ResetPassword = function ResetPassword() {
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.useForm)({
-    fname: "Gaurav",
-    lname: "Bhatt",
-    userid: "8954382491",
-    password: "Gaurav@1924"
+    userid: "8954382491"
   }),
       data = _useForm.data,
       setData = _useForm.setData,
@@ -48,7 +45,7 @@ var Register = function Register() {
 
   function submit(e) {
     e.preventDefault();
-    post(route('register'));
+    post(route('password.email'));
   }
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
@@ -70,123 +67,66 @@ var Register = function Register() {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("header", {
       className: "text-center pb-7 d-none d-md-block",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_BrandLogo__WEBPACK_IMPORTED_MODULE_3__.default, {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-      className: "bg-white border-none border-md-1 border-gray w-full w-md-654 md-shadow-sm pb-7",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("form", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      className: "bg-white border-none border-md-1 border-gray w-full w-md-360 md-shadow-sm  pb-7",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("header", {
+        className: "text-center mt-7 d-block d-md-none",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_BrandLogo__WEBPACK_IMPORTED_MODULE_3__.default, {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        className: "section-heading text-center",
+        children: "Reset Your Password"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("form", {
         onSubmit: submit,
         className: "needs-validation",
         noValidate: true,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("header", {
-          className: "text-center mt-7 d-block d-md-none",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_BrandLogo__WEBPACK_IMPORTED_MODULE_3__.default, {})
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-          className: "section-heading text-center",
-          children: "Welcome You"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
           className: "text-center d-flex flex-column flex-md-row align-items-center justify-content-center flex-wrap",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_InputText__WEBPACK_IMPORTED_MODULE_4__.default, {
-              id: "fname",
-              value: data.fname,
-              onChange: function onChange(e) {
-                return setData('fname', e.target.value);
-              },
-              className: (errors.fname ? "is-invalid " : '') + "form-control input-text",
-              placeholder: "First Name",
-              required: true
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-              className: "valid-feedback text-left ml-2",
-              children: "Looks good!"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-              className: "invalid-feedback text-left ml-2",
-              children: "First Name is required!"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_InputText__WEBPACK_IMPORTED_MODULE_4__.default, {
-              id: "lname",
-              value: data.lname,
-              onChange: function onChange(e) {
-                return setData('lname', e.target.value);
-              },
-              className: (errors.lname ? "is-invalid " : '') + "form-control input-text",
-              placeholder: "Last Name",
-              required: true
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-              className: "valid-feedback text-left ml-2",
-              children: "Looks good!"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-              className: "invalid-feedback text-left ml-2",
-              children: "Last Name is required!"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_InputText__WEBPACK_IMPORTED_MODULE_4__.default, {
-              id: "userid",
-              value: data.userid,
-              onChange: function onChange(e) {
-                return setData('userid', e.target.value);
-              },
-              className: (errors.userid ? "is-invalid " : '') + "form-control input-text",
-              placeholder: "Email address or phone number",
-              pattern: "([_a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,5}))|([789]\\d{9})$",
-              required: true
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-              className: "valid-feedback text-left ml-2",
-              children: "Looks good!"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-              className: "invalid-feedback text-left ml-2",
-              children: errors.userid ? errors.userid : "Invalid Email address or phone no!"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_InputPassword__WEBPACK_IMPORTED_MODULE_5__.default, {
-              id: "password",
-              value: data.password,
-              onChange: function onChange(e) {
-                return setData('password', e.target.value);
-              },
-              className: (errors.password ? "is-invalid " : '') + "form-control input-text",
-              placeholder: "Password",
-              pattern: "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}",
-              required: true
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-              className: "valid-feedback text-left ml-2",
-              children: "Looks good!"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-              className: "invalid-feedback text-left ml-2 text-wrap w-290",
-              children: "Password must contain at least one number, one uppercase, lowercase letter, and at least 8 or more characters"
-            })]
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_InputText__WEBPACK_IMPORTED_MODULE_4__.default, {
+            id: "userid",
+            value: data.userid,
+            onChange: function onChange(e) {
+              return setData('userid', e.target.value);
+            },
+            className: (errors.fail || errors.userid ? "is-invalid " : '') + "form-control input-text",
+            placeholder: "Email address or phone number",
+            pattern: "([_a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,5}))|([789]\\d{9})$",
+            required: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+            className: "invalid-feedback text-left w-290",
+            children: errors.fail ? errors.fail : errors.userid ? errors.userid : "Email address or phone no is required!"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
           className: "text-center d-flex align-items-center flex-column",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_PrimaryButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_PrimaryButton__WEBPACK_IMPORTED_MODULE_6__.default, {
             type: "submit",
-            value: "Sign up",
+            value: "Send Password Reset Request",
             addClass: "w-290 m-2"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-            className: "d-flex align-items-center justify-content-around my-1",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("hr", {
-              className: "w-123 border-gray mx-2"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("span", {
-              className: "fz-16 text-gray",
-              children: "or"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("hr", {
-              className: "w-123 border-gray mx-2"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_GoogleButton__WEBPACK_IMPORTED_MODULE_7__.default, {
-            value: "Sign up using"
-          })]
+          })
         })]
-      })
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_DefaultModal__WEBPACK_IMPORTED_MODULE_8__.default, {
-      title: "Email or Phone already exists!",
+      title: "System Info",
       msg: errors.userid,
-      id: "userid-error",
+      id: "invalid_credentials-error",
       show: errors.userid,
+      showconfirmationmsg: false
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_DefaultModal__WEBPACK_IMPORTED_MODULE_8__.default, {
+      title: "Password Reset Email Sent!",
+      msg: errors.success,
+      id: "success-link",
+      show: errors.success,
+      showconfirmationmsg: false
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_DefaultModal__WEBPACK_IMPORTED_MODULE_8__.default, {
+      title: "Something went wrong!",
+      msg: errors.fail,
+      id: "fail-error",
+      show: errors.fail,
       showconfirmationmsg: false
     })]
   });
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Register);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ResetPassword);
 
 /***/ }),
 

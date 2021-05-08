@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
@@ -18,7 +19,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
+        'userid',
         'password',
     ];
 
@@ -38,6 +39,25 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'userid_verified_at' => 'datetime',
     ];
+
+    public function getEmailForPasswordReset()
+    {
+        return $this->userid;
+    }
+
+    public function routeNotificationFor($driver)
+    {
+        if (method_exists($this, $method = 'routeNotificationFor'.Str::studly($driver))) {
+            return $this->{$method}();
+        }
+
+        switch ($driver) {
+            case 'database':
+                return $this->notifications();
+            case 'mail':
+                return $this->userid;
+        }
+    }
 }
