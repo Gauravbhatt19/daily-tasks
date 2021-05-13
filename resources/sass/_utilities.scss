@@ -1,9 +1,22 @@
 .section-heading {
-	@extend .font-roboto-bold, .fz-16, .mt-6;
+	@extend .font-roboto-bold, .fz-16, .pt-6;
 }
 
 .input-text {
 	@extend .w-290, .shadow-sm, .h-38, .px-2, .m-2, .rounded-0;
+
+	&::placeholder {
+		@extend .fz-16, .font-roboto-regular, .text-gray;
+	}
+	&:focus {
+		@extend .border-primary;
+	}
+
+	outline-color: $picton-blue;
+	border: 1px solid $gray;
+}
+.input-textarea {
+	@extend .w-290, .shadow-sm, .px-2, .m-2, .rounded-0;
 
 	&::placeholder {
 		@extend .fz-16, .font-roboto-regular, .text-gray;
@@ -34,6 +47,14 @@ $value in $font-sizes {
 
 .w-screen {
 	width: 100vw !important;
+}
+
+.max-w-340 {
+	max-width: 340px !important;
+}
+
+.white-space-pre-line {
+	white-space: pre-line;
 }
 
 @import 'utilities/sm';

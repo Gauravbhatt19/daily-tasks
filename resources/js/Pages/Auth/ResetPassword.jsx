@@ -11,7 +11,7 @@ import DefaultModal from '../../components/DefaultModal'
 const ResetPassword = () => {
     
     const { data, setData, post, processing, errors } = useForm({
-        userid: "8954382491",
+        userid: "",
     });
 
     

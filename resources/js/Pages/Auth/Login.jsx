@@ -8,10 +8,9 @@ import GoogleButton from '../../components/GoogleButton'
 import DefaultModal from '../../components/DefaultModal'
 
 const Login = () => {
-
     const { data, setData, post, processing, errors } = useForm({
-        userid: "8954382491",
-        password: "Gaurav@1924",
+        userid: "",
+        password: "",
     });
 
     function submit(e) {
@@ -31,6 +30,11 @@ const Login = () => {
             form.classList.add('was-validated');
           }, false);
         });
+
+        var modalBackdrop = document.querySelector('.modal-backdrop');
+        if ( null !== modalBackdrop ) {
+            modalBackdrop.remove();
+        }
     });
 
     return (
@@ -68,7 +72,7 @@ const Login = () => {
                         </div>
 
                         <PrimaryButton type="submit" value="Login" addClass="w-290 m-2"/>
-                        <div className="d-flex align-items-center justify-content-around my-3">
+                        <div className="align-items-center justify-content-around my-3 d-none">
                             <hr className="w-123 border-gray mx-2"/>
                             <span className="fz-16 text-gray">or</span>
                             <hr className="w-123 border-gray mx-2"/>

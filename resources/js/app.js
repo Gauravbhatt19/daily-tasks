@@ -6,6 +6,8 @@
 
 require('./bootstrap');
 
+var moment = require('moment');
+
 // Import modules...
 import { App } from '@inertiajs/inertia-react'
 import React from 'react'

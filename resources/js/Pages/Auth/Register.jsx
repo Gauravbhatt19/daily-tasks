@@ -11,10 +11,10 @@ import DefaultModal from '../../components/DefaultModal'
 const Register = () => {
     
     const { data, setData, post, processing, errors } = useForm({
-        fname: "Gaurav",
-        lname: "Bhatt",
-        userid: "8954382491",
-        password: "Gaurav@1924",
+        fname: "",
+        lname: "",
+        userid: "",
+        password: "",
     });
     
     function submit(e) {
@@ -87,7 +87,7 @@ const Register = () => {
                     </div>
                     <div className="text-center d-flex align-items-center flex-column">
                         <PrimaryButton type="submit" value="Sign up" addClass="w-290 m-2"/>
-                        <div className="d-flex align-items-center justify-content-around my-1">
+                        <div className="d-none align-items-center justify-content-around my-1">
                             <hr className="w-123 border-gray mx-2"/>
                             <span className="fz-16 text-gray">or</span>
                             <hr className="w-123 border-gray mx-2"/>

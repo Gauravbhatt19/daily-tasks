@@ -33,8 +33,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var Login = function Login() {
   var _useForm = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.useForm)({
-    userid: "8954382491",
-    password: "Gaurav@1924"
+    userid: "",
+    password: ""
   }),
       data = _useForm.data,
       setData = _useForm.setData,
@@ -60,6 +60,11 @@ var Login = function Login() {
         form.classList.add('was-validated');
       }, false);
     });
+    var modalBackdrop = document.querySelector('.modal-backdrop');
+
+    if (null !== modalBackdrop) {
+      modalBackdrop.remove();
+    }
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
     className: "d-flex flex-column-reverse flex-md-row align-items-center bg-md-gray w-screen h-md-screen justify-content-center",
@@ -135,7 +140,7 @@ var Login = function Login() {
             value: "Login",
             addClass: "w-290 m-2"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-            className: "d-flex align-items-center justify-content-around my-3",
+            className: "align-items-center justify-content-around my-3 d-none",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("hr", {
               className: "w-123 border-gray mx-2"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
@@ -319,7 +324,7 @@ __webpack_require__.r(__webpack_exports__);
 var GoogleButton = function GoogleButton(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
     type: "button",
-    className: "btn btn-outline-light border-1 border-gray text-gray rounded-0 w-290 shadow-md font-roboto-bold fz-16 m-2",
+    className: "btn btn-outline-light border-1 border-gray text-gray rounded-0 w-290 shadow-md font-roboto-bold fz-16 m-2 d-none",
     children: [props.value, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
       src: _png_google_logo_png__WEBPACK_IMPORTED_MODULE_1__.default,
       alt: "Logo",
