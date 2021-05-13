@@ -62,7 +62,7 @@ class LoginController extends Controller
             if (!$user) {
                 return back()->withErrors(["invalid_credentials"=>"Invalid Email/phone no. or password!"]);
             }
-            return Inertia::render('Home', $user);
+            return redirect()->route('home');
         });
     }
 }

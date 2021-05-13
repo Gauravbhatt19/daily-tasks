@@ -1,11 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from 'react'
 import { InertiaLink, useForm } from '@inertiajs/inertia-react'
 import BrandLogo from '../components/BrandLogo'
 import Logout from '../components/Logout'
 import UserAlt from '../components/UserAlt'
+import TasksContext from '../contexts/TasksContext'
+
+    
 
 
 const AppLayout = ({children}) => {
+
+	const tasksContext = useContext(TasksContext);
+    const user = tasksContext.user;
 
     return (
         <div>
@@ -24,16 +30,19 @@ const AppLayout = ({children}) => {
 
 				<div className="collapse navbar-collapse" id="primaryNavbarToggler">
 					<ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-						<li className="nav-item mx-md-4 border-bottom border-md-0 border-gray-light">
+						<li className="nav-item mx-md-4 border-bottom border-md-0 border-gray-light d-none">
 							<InertiaLink className="nav-link font-weight-bolder text-primary fz-24" href="#">Manage Profile <span className="d-inline-block text-primary w-38 h-38"><UserAlt /></span></InertiaLink>
 						</li>
+						<li className="nav-item mx-md-4 align-items-center d-flex fz-18">
+							Hello,&nbsp;<b><i>{user.name} !</i></b>
+						</li>
 						<li className="nav-item mx-md-4">
-							<InertiaLink className="nav-link font-weight-bolder text-red-light fz-24" href="#">Logout <span className="d-inline-block text-red-light w-38 h-38"><Logout /></span></InertiaLink>
+							<Logout />
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<div>
+			<div className="bg-gray-light h-md-screen pb-4">
 				{children}
 			</div>
         </div> 

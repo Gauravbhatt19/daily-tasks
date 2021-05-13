@@ -1,13 +1,64 @@
 import React from "react";
 import { InertiaLink } from '@inertiajs/inertia-react'
 import AppLayout from '../Layouts/AppLayout'
+import AddTaskButton from '../components/AddTaskButton'
+import TaskList from '../components/TaskList'
+import PreviousDayTaskButton from '../components/PreviousDayTaskButton'
+import NextDayTaskButton from '../components/NextDayTaskButton'
+import moment from 'moment'
+import { TasksContextProvider } from '../contexts/TasksContext'
 
-const Home = () => {
+const Home = (props) => {
+	const todaysDate = dateFormat();
+	const tommorowsDate = dateFormat(moment().add(1, 'days'));
+	const yesterdaysDate = dateFormat(moment().subtract(1, 'days'));
+	const tasksDate = dateFormat(props.date);
+	const isTasksToday = todaysDate === tasksDate;
+	const isTasksTommorow = tommorowsDate === tasksDate;
+	const isTasksPast = todaysDate>tasksDate;
+	const isTasksYesterday = yesterdaysDate === tasksDate;
+	
+	function dateFormat(date=null) {
+        const dateObj = date == null ? new Date() : new Date(date);
+        return moment(dateObj).format('DD MMM YYYY');
+    }
+
     return (
-    	<AppLayout>
-    		<h3>Here is our bike</h3>	
-    		<h1>No its my bicycle</h1>	
-    	</AppLayout>
+		<TasksContextProvider value={{
+			todaysDate:todaysDate,
+			tommorowsDate:tommorowsDate,
+			yesterdaysDate:yesterdaysDate,
+			tasksDate:tasksDate,
+			isTasksToday:isTasksToday,
+			isTasksTommorow:isTasksTommorow,
+			isTasksPast:isTasksPast,
+			isTasksYesterday:isTasksYesterday,
+			user: props.user
+		}}>
+    		<AppLayout>
+	    		<div>
+	    			<div className="section-heading text-center">
+	    				<span><PreviousDayTaskButton value={tasksDate}/></span>
+	    				<span className="d-inline-block w-220">{( isTasksToday ? "Today's" : ( isTasksTommorow ? "Tommorow's" : ( isTasksYesterday ? "Yesterday's" : tasksDate ) ) )+" Tasks"}</span>
+	    				<span><NextDayTaskButton value={tasksDate}/></span>
+	    			</div>
+					<div className="d-flex justify-content-center flex-wrap">
+						<div className="todo-tasks mx-auto mx-sm-4">
+							<div className={(isTasksToday || !isTasksPast ? "" : "mt-3 pb-2 " )+"section-heading text-left"}>To Dos {(isTasksToday || !isTasksPast) && <AddTaskButton />}</div>
+							<div className="bg-white shadow-sm w-300">
+								<TaskList value={props.tasks.pending}/>
+							</div>
+						</div>
+						<div className="completed-tasks mx-auto mx-sm-4">
+							<div className="section-heading text-left mt-3 pb-2">Completed</div>
+							<div className="bg-white shadow-sm w-300">
+								<TaskList value={props.tasks.completed}/>
+							</div>
+						</div>
+					</div>
+				</div>
+    		</AppLayout>
+		</TasksContextProvider>
     );
 };
 

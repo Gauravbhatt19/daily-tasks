@@ -60,4 +60,9 @@ class User extends Authenticatable
                 return $this->userid;
         }
     }
+
+    public function tasks()
+    {
+        return $this->morphToMany('App\Models\Task', 'model', 'model_has_tasks');
+    }
 }

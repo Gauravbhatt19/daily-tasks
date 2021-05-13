@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Task;
+use App\Models\User;
 use App\Traits\ModuleBaseEntities;
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class HomeController extends Controller
 {
@@ -31,11 +36,27 @@ class HomeController extends Controller
     
     public function dashboard()
     {
-        $user = auth()->user();
-        return $this->returnFormattedResponse(function () use ($user) {
-            return $user;
-        }, function () use ($user) {
-            return Inertia::render('Home', $user);
+        $data['date'] = Carbon::now()->toDateString();
+        if ( request()->has('date') && request()->has('action') ) {
+            $data['date'] = request()->get('action') === "prev" ?
+                            Carbon::createFromFormat('d M Y', request()->get('date'))->subDay() :
+                            Carbon::createFromFormat('d M Y', request()->get('date'))->addDay();
+        }
+        $data['user'] = auth()->user();
+
+
+        $data['tasks']['pending'] = Task::whereHas('user', function (Builder $query) {
+            $query->where('model_id', auth()->user()->id);
+        })->whereDate('task_date',  $data['date'])->latest('updated_at')->whereNull('completed_at')->get();
+        
+        $data['tasks']['completed'] = Task::whereHas('user', function (Builder $query) {
+            $query->where('model_id', auth()->user()->id);
+        })->whereDate('task_date',  $data['date'])->latest('updated_at')->whereNotNull('completed_at')->get();
+
+        return $this->returnFormattedResponse(function () use ($data) {
+            return $data;
+        }, function () use ($data) {
+            return Inertia::render('Home', $data);
         });
 
     }

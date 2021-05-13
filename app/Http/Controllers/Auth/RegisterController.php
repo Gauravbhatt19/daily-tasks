@@ -9,6 +9,7 @@ use App\Providers\RouteServiceProvider;
 use App\Services\RegisterService;
 use App\Traits\ModuleBaseEntities;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 class RegisterController extends Controller
@@ -58,10 +59,11 @@ class RegisterController extends Controller
     public function register(UserRegisterRequest $request)
     {
         $user = $this->service->create($request->validated());
+        Auth::login($user);
         return $this->returnFormattedResponse(function () use ($user) {
             return $user;
         }, function () use ($user) {
-            return Inertia::render('Home', $user);
+            return redirect()->route('home');
         });
     }
 }

@@ -308,7 +308,7 @@ __webpack_require__.r(__webpack_exports__);
 var GoogleButton = function GoogleButton(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
     type: "button",
-    className: "btn btn-outline-light border-1 border-gray text-gray rounded-0 w-290 shadow-md font-roboto-bold fz-16 m-2",
+    className: "btn btn-outline-light border-1 border-gray text-gray rounded-0 w-290 shadow-md font-roboto-bold fz-16 m-2 d-none",
     children: [props.value, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
       src: _png_google_logo_png__WEBPACK_IMPORTED_MODULE_1__.default,
       alt: "Logo",
