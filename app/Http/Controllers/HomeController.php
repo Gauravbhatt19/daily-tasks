@@ -36,6 +36,7 @@ class HomeController extends Controller
     
     public function dashboard()
     {
+        $this->authorize('home', [Task::class] );
         $data['date'] = Carbon::now()->toDateString();
         if ( request()->has('date') && request()->has('action') ) {
             $data['date'] = request()->get('action') === "prev" ?
