@@ -10,7 +10,7 @@ class TaskService
 {
     public function store(array $data)
     {
-        $taskDate = $data['taskdate']!=null?Carbon::createFromFormat('d M Y', $data['taskdate']):Carbon::now();
+        $taskDate = isset($data['taskdate']) && $data['taskdate']!=null?Carbon::createFromFormat('d M Y', $data['taskdate']):Carbon::now();
         $task = Task::create([
             'name' => $data['taskname'],
             'description' => $data['taskdescription'],

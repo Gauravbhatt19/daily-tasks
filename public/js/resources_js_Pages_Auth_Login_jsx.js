@@ -96,11 +96,11 @@ var DefaultModal = function DefaultModal(props) {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "modal-dialog",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "modal-content",
+        className: "modal-content rounded-0",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "modal-header",
+          className: "modal-header border-0",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h5", {
-            className: "modal-title",
+            className: "modal-title font-roboto-bold fz-16",
             children: props.title
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
             type: "button",
@@ -116,7 +116,7 @@ var DefaultModal = function DefaultModal(props) {
           className: "modal-body",
           children: props.msg
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "modal-footer",
+          className: "modal-footer border-0",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_SecondaryButton__WEBPACK_IMPORTED_MODULE_2__.default, {
             value: "Close",
             dataDismiss: "modal"
@@ -379,11 +379,6 @@ var Login = function Login() {
         form.classList.add('was-validated');
       }, false);
     });
-    var modalBackdrop = document.querySelector('.modal-backdrop');
-
-    if (null !== modalBackdrop) {
-      modalBackdrop.remove();
-    }
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
     className: "d-flex flex-column-reverse flex-md-row align-items-center bg-md-gray w-screen h-md-screen justify-content-center",
@@ -433,7 +428,7 @@ var Login = function Login() {
               required: true
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
               className: "invalid-feedback text-left ml-2",
-              children: errors.invalid_credentials ? errors.invalid_credentials : errors.userid ? errors.userid : "Email address or phone no is required!"
+              children: errors.invalid_credentials ? errors.invalid_credentials : errors.userid ? errors.userid : "Email address or phone no is invalid!"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_InputPassword__WEBPACK_IMPORTED_MODULE_5__.default, {
@@ -448,7 +443,7 @@ var Login = function Login() {
               required: true
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
               className: "invalid-feedback text-left ml-2 text-wrap w-290",
-              children: "Password is required!"
+              children: "Password is invalid!"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
               href: route('password.request'),
               className: "mt-n2 text-right w-290 fz-16 d-inline-block",

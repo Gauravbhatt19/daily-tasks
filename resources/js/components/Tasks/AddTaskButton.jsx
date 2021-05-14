@@ -9,7 +9,6 @@ import TasksContext from '../../Contexts/TasksContext'
 const AddTaskButton = () => {
 	
     const tasksContext = useContext(TasksContext);
-	
 	const { data, setData, post, processing, errors, reset } = useForm({
 		taskname: "",
         taskdescription: "",
@@ -18,6 +17,8 @@ const AddTaskButton = () => {
     
     function submit(e) {
         e.preventDefault();
+    	
+        data.taskdate = tasksContext.tasksDate;
         post(route('task.store'), {
         	onSuccess: () => {
         		reset('taskname');

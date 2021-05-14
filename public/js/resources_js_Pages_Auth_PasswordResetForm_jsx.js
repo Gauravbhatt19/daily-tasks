@@ -96,11 +96,11 @@ var DefaultModal = function DefaultModal(props) {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "modal-dialog",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "modal-content",
+        className: "modal-content rounded-0",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "modal-header",
+          className: "modal-header border-0",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h5", {
-            className: "modal-title",
+            className: "modal-title font-roboto-bold fz-16",
             children: props.title
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
             type: "button",
@@ -116,7 +116,7 @@ var DefaultModal = function DefaultModal(props) {
           className: "modal-body",
           children: props.msg
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "modal-footer",
+          className: "modal-footer border-0",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_SecondaryButton__WEBPACK_IMPORTED_MODULE_2__.default, {
             value: "Close",
             dataDismiss: "modal"
