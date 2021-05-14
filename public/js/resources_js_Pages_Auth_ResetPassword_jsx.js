@@ -12,8 +12,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _png_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../png/logo.png */ "./resources/png/logo.png");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _png_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../png/logo.png */ "./resources/png/logo.png");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
@@ -21,10 +21,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var BrandLogo = function BrandLogo() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.InertiaLink, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
     href: route('home'),
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-      src: _png_logo_png__WEBPACK_IMPORTED_MODULE_1__.default,
+      src: _png_logo_png__WEBPACK_IMPORTED_MODULE_2__.default,
       alt: "Logo",
       className: "w-132"
     })
@@ -131,74 +131,6 @@ var DefaultModal = function DefaultModal(props) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DefaultModal);
-
-/***/ }),
-
-/***/ "./resources/js/Components/GoogleButton.jsx":
-/*!**************************************************!*\
-  !*** ./resources/js/Components/GoogleButton.jsx ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _png_google_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../png/google_logo.png */ "./resources/png/google_logo.png");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-
-
-var GoogleButton = function GoogleButton(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
-    type: "button",
-    className: "btn btn-outline-light border-1 border-gray text-gray rounded-0 w-290 shadow-md font-roboto-bold fz-16 m-2 d-none",
-    children: [props.value, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-      src: _png_google_logo_png__WEBPACK_IMPORTED_MODULE_1__.default,
-      alt: "Logo",
-      className: "w-70 mx-0.5"
-    }), " "]
-  });
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GoogleButton);
-
-/***/ }),
-
-/***/ "./resources/js/Components/InputPassword.jsx":
-/*!***************************************************!*\
-  !*** ./resources/js/Components/InputPassword.jsx ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
-var InputPassword = function InputPassword(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-    type: "password",
-    id: props.id,
-    value: props.value,
-    onChange: props.onChange,
-    className: props.className ? props.className : "input-text",
-    placeholder: props.placeholder,
-    required: props.required,
-    pattern: props.pattern
-  });
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InputPassword);
 
 /***/ }),
 
@@ -332,17 +264,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
-/* harmony import */ var _Components_BrandLogo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Components/BrandLogo */ "./resources/js/Components/BrandLogo.jsx");
+/* harmony import */ var _Components_BrandLogo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Components/BrandLogo */ "./resources/js/Components/BrandLogo.jsx");
+/* harmony import */ var _Components_DefaultModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Components/DefaultModal */ "./resources/js/Components/DefaultModal.jsx");
 /* harmony import */ var _Components_InputText__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Components/InputText */ "./resources/js/Components/InputText.jsx");
-/* harmony import */ var _Components_InputPassword__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Components/InputPassword */ "./resources/js/Components/InputPassword.jsx");
-/* harmony import */ var _Components_PrimaryButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Components/PrimaryButton */ "./resources/js/Components/PrimaryButton.jsx");
-/* harmony import */ var _Components_GoogleButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Components/GoogleButton */ "./resources/js/Components/GoogleButton.jsx");
-/* harmony import */ var _Components_DefaultModal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Components/DefaultModal */ "./resources/js/Components/DefaultModal.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-
+/* harmony import */ var _Components_PrimaryButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Components/PrimaryButton */ "./resources/js/Components/PrimaryButton.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -381,26 +307,26 @@ var ResetPassword = function ResetPassword() {
       }, false);
     });
   });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     className: "d-flex flex-column align-items-center bg-md-gray w-screen h-md-screen justify-content-center",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("header", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("header", {
       className: "text-center pb-7 d-none d-md-block",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_BrandLogo__WEBPACK_IMPORTED_MODULE_3__.default, {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_BrandLogo__WEBPACK_IMPORTED_MODULE_2__.default, {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       className: "bg-white border-none border-md-1 border-gray w-full w-md-360 md-shadow-sm  pb-7",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("header", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("header", {
         className: "text-center mt-7 d-block d-md-none",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_BrandLogo__WEBPACK_IMPORTED_MODULE_3__.default, {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_BrandLogo__WEBPACK_IMPORTED_MODULE_2__.default, {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "section-heading text-center",
         children: "Reset Your Password"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("form", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("form", {
         onSubmit: submit,
         className: "needs-validation",
         noValidate: true,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
           className: "text-center d-flex flex-column flex-md-row align-items-center justify-content-center flex-wrap",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_InputText__WEBPACK_IMPORTED_MODULE_4__.default, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_InputText__WEBPACK_IMPORTED_MODULE_4__.default, {
             id: "userid",
             value: data.userid,
             onChange: function onChange(e) {
@@ -410,32 +336,32 @@ var ResetPassword = function ResetPassword() {
             placeholder: "Email address or phone number",
             pattern: "([_a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,5}))|([789]\\d{9})$",
             required: true
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
             className: "invalid-feedback text-left w-290",
             children: errors.fail ? errors.fail : errors.userid ? errors.userid : "Email address or phone no is required!"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           className: "text-center d-flex align-items-center flex-column",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_PrimaryButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_PrimaryButton__WEBPACK_IMPORTED_MODULE_5__.default, {
             type: "submit",
             value: "Send Password Reset Request",
             addClass: "w-290 m-2"
           })
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_DefaultModal__WEBPACK_IMPORTED_MODULE_8__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_DefaultModal__WEBPACK_IMPORTED_MODULE_3__.default, {
       title: "System Info",
       msg: errors.userid,
       id: "invalid_credentials-error",
       show: errors.userid,
       showconfirmationmsg: false
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_DefaultModal__WEBPACK_IMPORTED_MODULE_8__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_DefaultModal__WEBPACK_IMPORTED_MODULE_3__.default, {
       title: "Password Reset Email Sent!",
       msg: errors.success,
       id: "success-link",
       show: errors.success,
       showconfirmationmsg: false
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Components_DefaultModal__WEBPACK_IMPORTED_MODULE_8__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Components_DefaultModal__WEBPACK_IMPORTED_MODULE_3__.default, {
       title: "Something went wrong!",
       msg: errors.fail,
       id: "fail-error",
@@ -446,21 +372,6 @@ var ResetPassword = function ResetPassword() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ResetPassword);
-
-/***/ }),
-
-/***/ "./resources/png/google_logo.png":
-/*!***************************************!*\
-  !*** ./resources/png/google_logo.png ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/google_logo.png?b99d018e5dd8d64417c5aa70fbc1d7b3");
 
 /***/ }),
 

@@ -1,12 +1,9 @@
 import React, { useEffect } from "react";
-import { InertiaLink, useForm } from '@inertiajs/inertia-react'
-import { Inertia } from '@inertiajs/inertia'
+import { useForm } from '@inertiajs/inertia-react'
 import BrandLogo from '../../Components/BrandLogo'
-import InputText from '../../Components/InputText'
-import InputPassword from '../../Components/InputPassword'
-import PrimaryButton from '../../Components/PrimaryButton'
-import GoogleButton from '../../Components/GoogleButton'
 import DefaultModal from '../../Components/DefaultModal'
+import InputText from '../../Components/InputText'
+import PrimaryButton from '../../Components/PrimaryButton'
     
 const ResetPassword = () => {
     

@@ -12,8 +12,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _png_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../png/logo.png */ "./resources/png/logo.png");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _png_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../png/logo.png */ "./resources/png/logo.png");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
@@ -21,10 +21,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var BrandLogo = function BrandLogo() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.InertiaLink, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
     href: route('home'),
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-      src: _png_logo_png__WEBPACK_IMPORTED_MODULE_1__.default,
+      src: _png_logo_png__WEBPACK_IMPORTED_MODULE_2__.default,
       alt: "Logo",
       className: "w-132"
     })
@@ -333,11 +333,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _Components_BrandLogo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Components/BrandLogo */ "./resources/js/Components/BrandLogo.jsx");
-/* harmony import */ var _Components_InputText__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Components/InputText */ "./resources/js/Components/InputText.jsx");
-/* harmony import */ var _Components_InputPassword__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Components/InputPassword */ "./resources/js/Components/InputPassword.jsx");
-/* harmony import */ var _Components_PrimaryButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Components/PrimaryButton */ "./resources/js/Components/PrimaryButton.jsx");
-/* harmony import */ var _Components_GoogleButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Components/GoogleButton */ "./resources/js/Components/GoogleButton.jsx");
-/* harmony import */ var _Components_DefaultModal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Components/DefaultModal */ "./resources/js/Components/DefaultModal.jsx");
+/* harmony import */ var _Components_DefaultModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Components/DefaultModal */ "./resources/js/Components/DefaultModal.jsx");
+/* harmony import */ var _Components_GoogleButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Components/GoogleButton */ "./resources/js/Components/GoogleButton.jsx");
+/* harmony import */ var _Components_InputPassword__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Components/InputPassword */ "./resources/js/Components/InputPassword.jsx");
+/* harmony import */ var _Components_InputText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Components/InputText */ "./resources/js/Components/InputText.jsx");
+/* harmony import */ var _Components_PrimaryButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Components/PrimaryButton */ "./resources/js/Components/PrimaryButton.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
@@ -400,7 +400,7 @@ var Login = function Login() {
             className: "fz-16 fz-md-18 font-roboto-bold mt-md-1",
             children: "New User? It\u2019s quick and easy"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_PrimaryButton__WEBPACK_IMPORTED_MODULE_5__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_PrimaryButton__WEBPACK_IMPORTED_MODULE_7__.default, {
           value: "Join now",
           href: route('register'),
           addClass: "w-290 m-2"
@@ -421,7 +421,7 @@ var Login = function Login() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
           className: "text-center d-flex flex-column align-items-center",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_InputText__WEBPACK_IMPORTED_MODULE_3__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_InputText__WEBPACK_IMPORTED_MODULE_6__.default, {
               id: "userid",
               value: data.userid,
               onChange: function onChange(e) {
@@ -436,7 +436,7 @@ var Login = function Login() {
               children: errors.invalid_credentials ? errors.invalid_credentials : errors.userid ? errors.userid : "Email address or phone no is required!"
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_InputPassword__WEBPACK_IMPORTED_MODULE_4__.default, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_InputPassword__WEBPACK_IMPORTED_MODULE_5__.default, {
               id: "password",
               value: data.password,
               onChange: function onChange(e) {
@@ -454,7 +454,7 @@ var Login = function Login() {
               className: "mt-n2 text-right w-290 fz-16 d-inline-block",
               children: "Forgot Password?"
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_PrimaryButton__WEBPACK_IMPORTED_MODULE_5__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_PrimaryButton__WEBPACK_IMPORTED_MODULE_7__.default, {
             type: "submit",
             value: "Login",
             addClass: "w-290 m-2"
@@ -468,12 +468,12 @@ var Login = function Login() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("hr", {
               className: "w-123 border-gray mx-2"
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_GoogleButton__WEBPACK_IMPORTED_MODULE_6__.default, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_GoogleButton__WEBPACK_IMPORTED_MODULE_4__.default, {
             value: "Login using"
           })]
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_DefaultModal__WEBPACK_IMPORTED_MODULE_7__.default, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_Components_DefaultModal__WEBPACK_IMPORTED_MODULE_3__.default, {
       title: "Invalid Credentials!",
       msg: errors.invalid_credentials,
       id: "invalid_credentials-error",

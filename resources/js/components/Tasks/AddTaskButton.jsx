@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
+import { useForm } from '@inertiajs/inertia-react'
 import logo from '../../../svg/plus-square.svg';
-import { InertiaLink, useForm } from '@inertiajs/inertia-react'
-import SecondaryButton from '../SecondaryButton'
-import PrimaryButton from '../PrimaryButton'
 import InputText from '../InputText'
 import InputTextArea from '../InputTextArea'
+import PrimaryButton from '../PrimaryButton'
 import TasksContext from '../../Contexts/TasksContext'
 
 const AddTaskButton = () => {

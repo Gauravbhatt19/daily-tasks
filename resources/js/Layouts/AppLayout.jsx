@@ -1,10 +1,10 @@
-import React, { useEffect, useContext } from 'react'
-import { InertiaLink, useForm } from '@inertiajs/inertia-react'
+import React, { useContext } from 'react'
+import { InertiaLink } from '@inertiajs/inertia-react'
 import BrandLogo from '../Components/BrandLogo'
+import IndiaLogo from '../Components/IndiaLogo'
 import Logout from '../Components/Logout'
-import UserAlt from '../Components/UserAlt'
 import TasksContext from '../Contexts/TasksContext'
-import India from '../Components/India'
+import UserAltLogo from '../Components/UserAltLogo'
 
 const AppLayout = ({children}) => {
 
@@ -32,7 +32,7 @@ const AppLayout = ({children}) => {
 					<div className="collapse navbar-collapse" id="primaryNavbarToggler">
 						<ul className="navbar-nav ml-auto mt-2 mt-lg-0">
 							<li className="nav-item mx-md-4 border-bottom border-md-0 border-gray-light d-none">
-								<InertiaLink className="nav-link font-weight-bolder text-primary fz-24" href="#">Manage Profile <span className="d-inline-block text-primary w-38 h-38"><UserAlt /></span></InertiaLink>
+								<InertiaLink className="nav-link font-weight-bolder text-primary fz-24" href="#">Manage Profile <span className="d-inline-block text-primary w-38 h-38"><UserAltLogo /></span></InertiaLink>
 							</li>
 							<li className="nav-item mx-md-4 align-items-center d-flex fz-18">
 								Hello,&nbsp;<b><i>{user.name} !</i></b>
@@ -49,7 +49,7 @@ const AppLayout = ({children}) => {
 			</div>
 			{ github_src_uri!='' && author_github_src_uri!='' &&
 				<footer className="bg-white fz-16 fz-md-18 text-center py-3">
-					Made in <India /> with &#10084; by <a href={author_github_src_uri} target="_blank">Gauravbhatt19,</a> Want to contribute? <a href={github_src_uri} target="_blank">Source Link</a>
+					Made in <IndiaLogo /> with &#10084; by <a href={author_github_src_uri} target="_blank">Gauravbhatt19,</a> Want to contribute? <a href={github_src_uri} target="_blank">Source Link</a>
 				</footer>
 			}
         </div> 
