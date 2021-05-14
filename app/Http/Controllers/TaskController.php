@@ -23,6 +23,7 @@ class TaskController extends Controller
     public function __construct(TaskService $service)
     {
         $this->service = $service;
+        $this->authorizeResource(Task::class);
     }
 
     /**
@@ -120,6 +121,7 @@ class TaskController extends Controller
      */
     public function completed(Task $task)
     {
+        $this->authorize('toggle', [Task::class, $task] );
         $response = $this->service->toggle($task, 'completed');
         return $this->returnFormattedResponse(function () use ($response) {
             return $response;
@@ -137,6 +139,7 @@ class TaskController extends Controller
      */
     public function pending(Task $task)
     {
+        $this->authorize('toggle', [Task::class, $task] );
         $response = $this->service->toggle($task, 'pending');
         return $this->returnFormattedResponse(function () use ($response) {
             return $response;
