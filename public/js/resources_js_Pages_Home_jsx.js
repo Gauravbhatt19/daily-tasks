@@ -121,14 +121,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Home = function Home(props) {
+  var tasksDate = dateFormat(props.date);
   var todaysDate = dateFormat();
   var tommorowsDate = dateFormat(moment__WEBPACK_IMPORTED_MODULE_7___default()().add(1, 'days'));
   var yesterdaysDate = dateFormat(moment__WEBPACK_IMPORTED_MODULE_7___default()().subtract(1, 'days'));
-  var tasksDate = dateFormat(props.date);
-  var isTasksToday = todaysDate === tasksDate;
-  var isTasksTommorow = tommorowsDate === tasksDate;
-  var isTasksPast = todaysDate > tasksDate;
-  var isTasksYesterday = yesterdaysDate === tasksDate;
+  var isTasksToday = moment__WEBPACK_IMPORTED_MODULE_7___default()(todaysDate).isSame(tasksDate, 'day');
+  var isTasksTommorow = moment__WEBPACK_IMPORTED_MODULE_7___default()(tommorowsDate).isSame(tasksDate, 'day');
+  var isTasksYesterday = moment__WEBPACK_IMPORTED_MODULE_7___default()(yesterdaysDate).isSame(tasksDate, 'day');
+  var isTasksPast = moment__WEBPACK_IMPORTED_MODULE_7___default()(todaysDate).isAfter(tasksDate, 'day');
 
   function dateFormat() {
     var date = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
@@ -138,14 +138,14 @@ var Home = function Home(props) {
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_contexts_TasksContext__WEBPACK_IMPORTED_MODULE_8__.TasksContextProvider, {
     value: {
+      tasksDate: tasksDate,
       todaysDate: todaysDate,
       tommorowsDate: tommorowsDate,
       yesterdaysDate: yesterdaysDate,
-      tasksDate: tasksDate,
       isTasksToday: isTasksToday,
       isTasksTommorow: isTasksTommorow,
-      isTasksPast: isTasksPast,
       isTasksYesterday: isTasksYesterday,
+      isTasksPast: isTasksPast,
       user: props.user
     },
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_2__.default, {
