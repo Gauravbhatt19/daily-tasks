@@ -1,13 +1,10 @@
 import React, { useEffect, useContext } from 'react'
 import { InertiaLink, useForm } from '@inertiajs/inertia-react'
-import BrandLogo from '../components/BrandLogo'
-import Logout from '../components/Logout'
-import UserAlt from '../components/UserAlt'
-import TasksContext from '../contexts/TasksContext'
-import India from '../components/India'
-
-    
-
+import BrandLogo from '../Components/BrandLogo'
+import Logout from '../Components/Logout'
+import UserAlt from '../Components/UserAlt'
+import TasksContext from '../Contexts/TasksContext'
+import India from '../Components/India'
 
 const AppLayout = ({children}) => {
 

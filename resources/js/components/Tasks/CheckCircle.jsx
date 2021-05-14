@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../svg/check-circle.svg';
+import logo from '../../../svg/check-circle.svg';
 import { InertiaLink } from '@inertiajs/inertia-react'
 
 const CheckCircle = (props) => {

@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { InertiaLink, useForm } from '@inertiajs/inertia-react'
-import BrandLogo from '../../components/BrandLogo'
-import InputText from '../../components/InputText'
-import InputPassword from '../../components/InputPassword'
-import PrimaryButton from '../../components/PrimaryButton'
-import GoogleButton from '../../components/GoogleButton'
-import DefaultModal from '../../components/DefaultModal'
+import BrandLogo from '../../Components/BrandLogo'
+import InputText from '../../Components/InputText'
+import InputPassword from '../../Components/InputPassword'
+import PrimaryButton from '../../Components/PrimaryButton'
+import GoogleButton from '../../Components/GoogleButton'
+import DefaultModal from '../../Components/DefaultModal'
 
 const Login = () => {
     const { data, setData, post, processing, errors } = useForm({

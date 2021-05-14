@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import CheckCircle from './CheckCircle'
 import Circle from './Circle'
 import EditTaskButton from './EditTaskButton'
-import TasksContext from '../contexts/TasksContext'
+import TasksContext from '../../Contexts/TasksContext'
 
 const TaskListItem = (props) => {
     const task = props.value;
