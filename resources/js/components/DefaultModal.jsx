@@ -20,9 +20,9 @@ const DefaultModal = (props) => {
   return (
    <div className="modal fade" id={props.id}>
       <div className="modal-dialog">
-        <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title">{props.title}</h5>
+        <div className="modal-content rounded-0">
+          <div className="modal-header border-0">
+            <h5 className="modal-title font-roboto-bold fz-16">{props.title}</h5>
             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -30,7 +30,7 @@ const DefaultModal = (props) => {
           <div className="modal-body">
             {props.msg}
           </div>
-          <div className="modal-footer">
+          <div className="modal-footer border-0">
             <SecondaryButton value="Close" dataDismiss="modal"/>
             {props.showconfirmationmsg && <PrimaryButton href={props.confirmationlnk ? props.confirmationlnk :""} value={props.confirmationmsg ? props.confirmationmsg : 'Ok'}/>}
           </div>

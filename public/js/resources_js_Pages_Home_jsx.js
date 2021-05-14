@@ -123,7 +123,7 @@ var InputTextArea = function InputTextArea(props) {
     placeholder: props.placeholder,
     required: props.required,
     pattern: props.pattern,
-    defaultValue: props.value
+    value: props.value ? props.value : ''
   });
 };
 
@@ -163,6 +163,7 @@ var Logout = function Logout() {
       errors = _useForm.errors;
 
   function submit(e) {
+    $('#logout-confirmation').modal('hide');
     e.preventDefault();
     post(route('logout'));
   }
@@ -363,6 +364,7 @@ var AddTaskButton = function AddTaskButton() {
 
   function submit(e) {
     e.preventDefault();
+    data.taskdate = tasksContext.tasksDate;
     post(route('task.store'), {
       onSuccess: function onSuccess() {
         reset('taskname');
@@ -658,7 +660,7 @@ var EditTaskButton = function EditTaskButton(props) {
               className: "modal-footer border-0",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_PrimaryButton__WEBPACK_IMPORTED_MODULE_5__.default, {
                 type: "submit",
-                value: "Add",
+                value: "Update",
                 addClass: "w-full w-md-290 mx-auto mb-3"
               })
             })]

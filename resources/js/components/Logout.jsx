@@ -8,6 +8,7 @@ const Logout = () => {
 	const { data, setData, post, processing, errors } = useForm();
     
     function submit(e) {
+    	$('#logout-confirmation').modal('hide');
         e.preventDefault();
         post(route('logout'));
     }

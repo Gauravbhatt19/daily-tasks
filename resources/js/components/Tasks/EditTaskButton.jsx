@@ -53,7 +53,7 @@ const EditTaskButton = (props) => {
                         </div>
 			          </div>
 			          <div className="modal-footer border-0">
-			            <PrimaryButton type="submit" value="Add" addClass="w-full w-md-290 mx-auto mb-3"/>
+			            <PrimaryButton type="submit" value="Update" addClass="w-full w-md-290 mx-auto mb-3"/>
 			          </div>
 			        </div>
 			      </div>

@@ -31,10 +31,6 @@ const Login = () => {
           }, false);
         });
 
-        var modalBackdrop = document.querySelector('.modal-backdrop');
-        if ( null !== modalBackdrop ) {
-            modalBackdrop.remove();
-        }
     });
 
     return (
@@ -60,13 +56,13 @@ const Login = () => {
                         <div> 
                             <InputText id="userid" value={data.userid} onChange={e => setData('userid', e.target.value)} className={(errors.userid || errors.invalid_credentials ? "is-invalid " : '') + "form-control input-text"} placeholder="Email address or phone number" pattern="([_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,5}))|([789]\d{9})$" required/>
                             <div className="invalid-feedback text-left ml-2">
-                                { errors.invalid_credentials ? errors.invalid_credentials : ( errors.userid ? errors.userid : "Email address or phone no is required!" ) } 
+                                { errors.invalid_credentials ? errors.invalid_credentials : ( errors.userid ? errors.userid : "Email address or phone no is invalid!" ) } 
                             </div>
                         </div>
                         <div> 
                             <InputPassword id="password" value={data.password} onChange={e => setData('password', e.target.value)} className={(errors.password ? "is-invalid " : '') + "form-control input-text"} placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/>
                             <div className="invalid-feedback text-left ml-2 text-wrap w-290">
-                                Password is required!
+                                Password is invalid!
                             </div>
                             <InertiaLink href={route('password.request')} className="mt-n2 text-right w-290 fz-16 d-inline-block">Forgot Password?</InertiaLink>
                         </div>
