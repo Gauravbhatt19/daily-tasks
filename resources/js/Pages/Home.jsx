@@ -9,15 +9,17 @@ import moment from 'moment'
 import { TasksContextProvider } from '../contexts/TasksContext'
 
 const Home = (props) => {
+	
+	const tasksDate = dateFormat(props.date);
 	const todaysDate = dateFormat();
 	const tommorowsDate = dateFormat(moment().add(1, 'days'));
 	const yesterdaysDate = dateFormat(moment().subtract(1, 'days'));
-	const tasksDate = dateFormat(props.date);
-	const isTasksToday = todaysDate === tasksDate;
-	const isTasksTommorow = tommorowsDate === tasksDate;
-	const isTasksPast = todaysDate>tasksDate;
-	const isTasksYesterday = yesterdaysDate === tasksDate;
 	
+	const isTasksToday = moment(todaysDate).isSame(tasksDate, 'day');
+	const isTasksTommorow = moment(tommorowsDate).isSame(tasksDate, 'day');
+	const isTasksYesterday = moment(yesterdaysDate).isSame(tasksDate, 'day');
+	const isTasksPast = moment(todaysDate).isAfter(tasksDate, 'day');
+
 	function dateFormat(date=null) {
         const dateObj = date == null ? new Date() : new Date(date);
         return moment(dateObj).format('DD MMM YYYY');
@@ -25,14 +27,14 @@ const Home = (props) => {
 
     return (
 		<TasksContextProvider value={{
+			tasksDate:tasksDate,
 			todaysDate:todaysDate,
 			tommorowsDate:tommorowsDate,
 			yesterdaysDate:yesterdaysDate,
-			tasksDate:tasksDate,
 			isTasksToday:isTasksToday,
 			isTasksTommorow:isTasksTommorow,
-			isTasksPast:isTasksPast,
 			isTasksYesterday:isTasksYesterday,
+			isTasksPast:isTasksPast,
 			user: props.user
 		}}>
     		<AppLayout>
