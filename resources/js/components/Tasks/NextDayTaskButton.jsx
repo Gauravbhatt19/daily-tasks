@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../../svg/right-arrow.svg';
 import { InertiaLink } from '@inertiajs/inertia-react'
+import logo from '../../../svg/right-arrow.svg';
 
 const NextDayTaskButton = (props) => {
     return (

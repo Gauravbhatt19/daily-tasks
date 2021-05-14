@@ -1,12 +1,11 @@
 import React, {useEffect} from 'react'
-import { InertiaLink, useForm } from '@inertiajs/inertia-react'
-import { Inertia } from '@inertiajs/inertia'
-import BrandLogo from '../../components/BrandLogo'
-import InputText from '../../components/InputText'
-import InputPassword from '../../components/InputPassword'
-import PrimaryButton from '../../components/PrimaryButton'
-import GoogleButton from '../../components/GoogleButton'
-import DefaultModal from '../../components/DefaultModal'
+import { useForm } from '@inertiajs/inertia-react'
+import BrandLogo from '../../Components/BrandLogo'
+import DefaultModal from '../../Components/DefaultModal'
+import GoogleButton from '../../Components/GoogleButton'
+import InputPassword from '../../Components/InputPassword'
+import InputText from '../../Components/InputText'
+import PrimaryButton from '../../Components/PrimaryButton'
 
 const Register = () => {
     

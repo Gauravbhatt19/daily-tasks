@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../../svg/circle.svg';
 import { InertiaLink } from '@inertiajs/inertia-react'
+import logo from '../../../svg/circle.svg';
 
 const Circle = (props) => {
     return (

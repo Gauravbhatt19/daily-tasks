@@ -1,40 +1,42 @@
-import React from 'react';
-import logo from '../../svg/edit.svg';
-import { InertiaLink, useForm } from '@inertiajs/inertia-react'
-import SecondaryButton from './SecondaryButton'
-import PrimaryButton from './PrimaryButton'
-import InputText from './InputText'
-import InputTextArea from './InputTextArea'
+import React, { useContext } from 'react';
+import { useForm } from '@inertiajs/inertia-react'
+import logo from '../../../svg/plus-square.svg';
+import InputText from '../InputText'
+import InputTextArea from '../InputTextArea'
+import PrimaryButton from '../PrimaryButton'
+import TasksContext from '../../Contexts/TasksContext'
 
-const EditTaskButton = (props) => {
-
-	const task = props.value;
-
+const AddTaskButton = () => {
+	
+    const tasksContext = useContext(TasksContext);
+	
 	const { data, setData, post, processing, errors, reset } = useForm({
-		taskname: task.name,
-        taskdescription: task.description,
-        taskid: task.id,
+		taskname: "",
+        taskdescription: "",
+        taskdate: tasksContext.tasksDate,
 	});
     
     function submit(e) {
         e.preventDefault();
-        post(route('task.update', task.id), {
+        post(route('task.store'), {
         	onSuccess: () => {
-        		$("#edit-task-form-modal-"+task.id).modal('hide');
+        		reset('taskname');
+        		reset('taskdescription');
+        		$('#add-task-form-modal').modal('hide');
         	}
         });
     }
 
     return (
-    	<div className="d-inline-block align-top pl-1">
+    	<div className="d-inline-block">
 	    	<form onSubmit={submit}>
-		    	<button type="button" className="p-0 nav-link bg-transparent border-0 font-weight-bolder text-red-light fz-24" data-toggle="modal" data-target={"#edit-task-form-modal-"+data.taskid}><span className="d-inline-block w-25 h-25"><img src={logo} alt="EditTaskButton"/></span>
+		    	<button type="button" className="nav-link bg-transparent border-0 font-weight-bolder text-red-light fz-24" data-toggle="modal" data-target="#add-task-form-modal"><span className="d-inline-block w-25 h-25"><img src={logo} alt="AddTaskButton"/></span>
 		    	</button>
-		    	<div className="modal fade" id={"edit-task-form-modal-"+data.taskid}>
+		    	<div className="modal fade" id="add-task-form-modal">
 			      <div className="modal-dialog modal-dialog-centered w-full max-w-340 m-auto">
 			        <div className="modal-content rounded-0">
 			          <div className="modal-header border-0 px-4 pt-5">
-			            <h5 className="modal-title font-roboto-bold fz-16">Edit Task</h5>
+			            <h5 className="modal-title font-roboto-bold fz-16">Add Task</h5>
 			            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
 			              <span aria-hidden="true">&times;</span>
 			            </button>
@@ -64,4 +66,4 @@ const EditTaskButton = (props) => {
     );
 }
 
-export default EditTaskButton;
+export default AddTaskButton;

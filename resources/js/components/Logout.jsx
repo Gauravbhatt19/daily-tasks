@@ -1,6 +1,6 @@
 import React from 'react';
+import { useForm } from '@inertiajs/inertia-react'
 import logo from '../../svg/logout.svg';
-import { InertiaLink, useForm } from '@inertiajs/inertia-react'
 import SecondaryButton from './SecondaryButton'
 
 const Logout = () => {

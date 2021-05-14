@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../../png/logo.png';
 import { InertiaLink } from '@inertiajs/inertia-react'
+import logo from '../../png/logo.png';
 
 const BrandLogo = () => {
     return (

@@ -1,12 +1,11 @@
 import React from "react";
-import { InertiaLink } from '@inertiajs/inertia-react'
-import AppLayout from '../Layouts/AppLayout'
-import AddTaskButton from '../components/AddTaskButton'
-import TaskList from '../components/TaskList'
-import PreviousDayTaskButton from '../components/PreviousDayTaskButton'
-import NextDayTaskButton from '../components/NextDayTaskButton'
 import moment from 'moment'
-import { TasksContextProvider } from '../contexts/TasksContext'
+import AppLayout from '../Layouts/AppLayout'
+import AddTaskButton from '../Components/Tasks/AddTaskButton'
+import PreviousDayTaskButton from '../Components/Tasks/PreviousDayTaskButton'
+import TaskList from '../Components/Tasks/TaskList'
+import NextDayTaskButton from '../Components/Tasks/NextDayTaskButton'
+import { TasksContextProvider } from '../Contexts/TasksContext'
 
 const Home = (props) => {
 	
