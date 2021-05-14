@@ -17,7 +17,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Logout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Logout */ "./resources/js/components/Logout.jsx");
 /* harmony import */ var _components_UserAlt__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/UserAlt */ "./resources/js/components/UserAlt.jsx");
 /* harmony import */ var _contexts_TasksContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../contexts/TasksContext */ "./resources/js/contexts/TasksContext.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_India__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/India */ "./resources/js/components/India.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -31,53 +33,68 @@ var AppLayout = function AppLayout(_ref) {
   var children = _ref.children;
   var tasksContext = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_contexts_TasksContext__WEBPACK_IMPORTED_MODULE_5__.default);
   var user = tasksContext.user;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("nav", {
-      className: "navbar navbar-expand-md navbar-light bg-white shadow-md p-4",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_BrandLogo__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        className: "rounded-0 text-primary border border-primary px-1 d-block d-md-none",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("button", {
-          id: "menu-hamburger",
-          className: "navbar-toggler border-0",
-          type: "button",
-          "data-toggle": "collapse",
-          "data-target": "#primaryNavbarToggler",
-          "aria-controls": "primaryNavbarToggler",
-          "aria-expanded": "false",
-          "aria-label": "Toggle Primary navigation",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {})]
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-        className: "collapse navbar-collapse",
-        id: "primaryNavbarToggler",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("ul", {
-          className: "navbar-nav ml-auto mt-2 mt-lg-0",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
-            className: "nav-item mx-md-4 border-bottom border-md-0 border-gray-light d-none",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
-              className: "nav-link font-weight-bolder text-primary fz-24",
-              href: "#",
-              children: ["Manage Profile ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
-                className: "d-inline-block text-primary w-38 h-38",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_UserAlt__WEBPACK_IMPORTED_MODULE_4__.default, {})
-              })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
-            className: "nav-item mx-md-4 align-items-center d-flex fz-18",
-            children: ["Hello,\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("b", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("i", {
-                children: [user.name, " !"]
+  var github_src_uri = tasksContext.github_src_uri;
+  var author_github_src_uri = tasksContext.author_github_src_uri;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("header", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("nav", {
+        className: "navbar navbar-expand-md navbar-light bg-white shadow-md p-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_BrandLogo__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+          className: "rounded-0 text-primary border border-primary px-1 d-block d-md-none",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("button", {
+            id: "menu-hamburger",
+            className: "navbar-toggler border-0",
+            type: "button",
+            "data-toggle": "collapse",
+            "data-target": "#primaryNavbarToggler",
+            "aria-controls": "primaryNavbarToggler",
+            "aria-expanded": "false",
+            "aria-label": "Toggle Primary navigation",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {})]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+          className: "collapse navbar-collapse",
+          id: "primaryNavbarToggler",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("ul", {
+            className: "navbar-nav ml-auto mt-2 mt-lg-0",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("li", {
+              className: "nav-item mx-md-4 border-bottom border-md-0 border-gray-light d-none",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
+                className: "nav-link font-weight-bolder text-primary fz-24",
+                href: "#",
+                children: ["Manage Profile ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+                  className: "d-inline-block text-primary w-38 h-38",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_UserAlt__WEBPACK_IMPORTED_MODULE_4__.default, {})
+                })]
               })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("li", {
+              className: "nav-item mx-md-4 align-items-center d-flex fz-18",
+              children: ["Hello,\xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("b", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("i", {
+                  children: [user.name, " !"]
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("li", {
+              className: "nav-item mx-md-4",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Logout__WEBPACK_IMPORTED_MODULE_3__.default, {})
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
-            className: "nav-item mx-md-4",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_Logout__WEBPACK_IMPORTED_MODULE_3__.default, {})
-          })]
-        })
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          })
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       className: "bg-gray-light h-md-screen pb-4",
       children: children
+    }), github_src_uri != '' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("footer", {
+      className: "bg-white fz-16 fz-md-18 text-center py-3",
+      children: ["Made in ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_India__WEBPACK_IMPORTED_MODULE_6__.default, {}), " with \u2764 by ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("a", {
+        href: author_github_src_uri,
+        target: "_blank",
+        children: "Gauravbhatt19,"
+      }), " Want to contribute? ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("a", {
+        href: github_src_uri,
+        target: "_blank",
+        children: "Source Link"
+      })]
     })]
   });
 };
@@ -146,7 +163,9 @@ var Home = function Home(props) {
       isTasksTommorow: isTasksTommorow,
       isTasksYesterday: isTasksYesterday,
       isTasksPast: isTasksPast,
-      user: props.user
+      user: props.user,
+      github_src_uri: props.github_src_uri,
+      author_github_src_uri: props.author_github_src_uri
     },
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_2__.default, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
@@ -595,6 +614,36 @@ var EditTaskButton = function EditTaskButton(props) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EditTaskButton);
+
+/***/ }),
+
+/***/ "./resources/js/components/India.jsx":
+/*!*******************************************!*\
+  !*** ./resources/js/components/India.jsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _svg_india_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../svg/india.svg */ "./resources/svg/india.svg");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var India = function India() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+    src: _svg_india_svg__WEBPACK_IMPORTED_MODULE_1__.default,
+    alt: "India",
+    height: "20"
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (India);
 
 /***/ }),
 
@@ -1133,6 +1182,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/edit.svg?a7af1d31e8fb995206991faf202188cc");
+
+/***/ }),
+
+/***/ "./resources/svg/india.svg":
+/*!*********************************!*\
+  !*** ./resources/svg/india.svg ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/india.svg?b508a68d879bb0bb7266fb803d3940c9");
 
 /***/ }),
 

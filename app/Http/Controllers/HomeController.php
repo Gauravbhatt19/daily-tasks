@@ -42,8 +42,11 @@ class HomeController extends Controller
                             Carbon::createFromFormat('d M Y', request()->get('date'))->subDay() :
                             Carbon::createFromFormat('d M Y', request()->get('date'))->addDay();
         }
+
         $data['user'] = auth()->user();
 
+        $data['github_src_uri'] = env('GITHUB_SRC_URI');
+        $data['author_github_src_uri'] = env('AUTHOR_GITHUB_SRC_URI');
 
         $data['tasks']['pending'] = Task::whereHas('user', function (Builder $query) {
             $query->where('model_id', auth()->user()->id);
