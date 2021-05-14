@@ -35,7 +35,9 @@ const Home = (props) => {
 			isTasksTommorow:isTasksTommorow,
 			isTasksYesterday:isTasksYesterday,
 			isTasksPast:isTasksPast,
-			user: props.user
+			user: props.user,
+			github_src_uri: props.github_src_uri,
+			author_github_src_uri: props.author_github_src_uri,
 		}}>
     		<AppLayout>
 	    		<div>
