@@ -66,7 +66,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div> 
-                            <InputText id="userid" value={data.userid} onChange={e => setData('userid', e.target.value)} className={(errors.userid ? "is-invalid " : '') + "form-control input-text"} placeholder="Email address or phone number" pattern="([_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,5}))|([789]\d{9})$" required/>
+                            <InputText id="userid" value={data.userid} onChange={e => setData('userid', e.target.value)} className={(errors.userid ? "is-invalid " : '') + "form-control input-text"} placeholder="Email address or phone number" pattern="([_A-Za-z0-9]+(\.[_A-Za-z0-9]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[A-Za-z]{2,5}))|([789]\d{9})$" required/>
                             <div className="valid-feedback text-left ml-2">
                                 Looks good!
                             </div>

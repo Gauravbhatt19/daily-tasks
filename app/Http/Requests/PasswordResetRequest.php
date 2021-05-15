@@ -24,7 +24,7 @@ class PasswordResetRequest extends FormRequest
     public function rules()
     {
         return [
-            'userid' => ['required', 'string', 'max:255', 'regex:/^([_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,5}))|([789]\d{9})+$/']
+            'userid' => ['required', 'string', 'max:255', 'regex:/^([_A-Za-z0-9]+(\.[_A-Za-z0-9]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[A-Za-z]{2,5}))|([789]\d{9})+$/']
         ];
     }
 

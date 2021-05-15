@@ -424,7 +424,7 @@ var Login = function Login() {
               },
               className: (errors.userid || errors.invalid_credentials ? "is-invalid " : '') + "form-control input-text",
               placeholder: "Email address or phone number",
-              pattern: "([_a-z0-9]+(\\.[_a-z0-9]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,5}))|([789]\\d{9})$",
+              pattern: "([_A-Za-z0-9]+(\\.[_A-Za-z0-9]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,5}))|([789]\\d{9})$",
               required: true
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
               className: "invalid-feedback text-left ml-2",

@@ -26,7 +26,7 @@ class UserRegisterRequest extends FormRequest
         return [
             'fname' => ['required', 'string', 'max:255'],
             'lname' => ['required', 'string', 'max:255'],
-            'userid' => ['required', 'string', 'max:255', 'unique:users,userid', 'regex:/^([_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,5}))|([789]\d{9})+$/'],
+            'userid' => ['required', 'string', 'max:255', 'unique:users,userid', 'regex:/^([_A-Za-z0-9]+(\.[_A-Za-z0-9]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[A-Za-z]{2,5}))|([789]\d{9})+$/'],
             'password' => ['required','string', 'max:255', 'regex:/^.*(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}.*$/']
         ];
     }
