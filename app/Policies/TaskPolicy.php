@@ -14,7 +14,7 @@ class TaskPolicy
      * Determine whether the user can view any models.
      *
      * @param  \App\Models\User  $user
-     * @return mixed
+     * @return boolean
      */
     public function viewAny(User $user)
     {
@@ -26,7 +26,7 @@ class TaskPolicy
      *
      * @param  \App\Models\User  $user
      * @param  \App\Models\Task  $task
-     * @return mixed
+     * @return boolean
      */
     public function view(User $user, Task $task)
     {
@@ -37,7 +37,7 @@ class TaskPolicy
      * Determine whether the user can create models.
      *
      * @param  \App\Models\User  $user
-     * @return mixed
+     * @return boolean
      */
     public function create(User $user)
     {
@@ -49,7 +49,7 @@ class TaskPolicy
      *
      * @param  \App\Models\User  $user
      * @param  \App\Models\Task  $task
-     * @return mixed
+     * @return boolean
      */
     public function update(User $user, Task $task)
     {
@@ -61,7 +61,7 @@ class TaskPolicy
      *
      * @param  \App\Models\User  $user
      * @param  \App\Models\Task  $task
-     * @return mixed
+     * @return boolean
      */
     public function delete(User $user, Task $task)
     {
@@ -73,7 +73,7 @@ class TaskPolicy
      *
      * @param  \App\Models\User  $user
      * @param  \App\Models\Task  $task
-     * @return mixed
+     * @return boolean
      */
     public function restore(User $user, Task $task)
     {
@@ -85,18 +85,31 @@ class TaskPolicy
      *
      * @param  \App\Models\User  $user
      * @param  \App\Models\Task  $task
-     * @return mixed
+     * @return boolean
      */
     public function forceDelete(User $user, Task $task)
     {
         return false;
     }
 
+    /**
+     * Determine whether the user can view the dashboard home.
+     *
+     * @param  \App\Models\User  $user
+     * @return boolean
+     */
     public function home(User $user)
     {
         return true;
     }
 
+    /**
+     * Determine whether the user toggle the task status between pending/complete the model.
+     *
+     * @param  \App\Models\User  $user
+     * @param  \App\Models\Task  $task
+     * @return boolean
+     */
     public function toggle(User $user, Task $task)
     {
         return in_array($task->id, $user->tasks->keyBy('id')->keys()->all());

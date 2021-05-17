@@ -31,10 +31,18 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+
+    /**
+     * Which Controller Helper Service Class.
+     *
+     * @var \App\Services\LoginService
+     */
     protected $service;
 
     /**
      * Create a new controller instance.
+     *
+     * @param  \App\Services\LoginService  $service
      *
      * @return void
      */
@@ -44,6 +52,11 @@ class LoginController extends Controller
         $this->service = $service;
     }
 
+    /**
+     * Show the application's login form.
+     *
+     * @return string|\Inertia\Response
+     */
     public function showLoginForm()
     {
         return $this->returnFormattedResponse(function () {
@@ -53,6 +66,14 @@ class LoginController extends Controller
         });
     }
 
+    /**
+     * Handle a login request to the application.
+     *
+     * @param  \App\Http\Requests\UserLoginRequest  $request
+     * @return \Inertia\Response|\App\Models\User
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
     public function login(UserLoginRequest $request)
     {
         $user = $this->service->validateUserLogin($request->validated());

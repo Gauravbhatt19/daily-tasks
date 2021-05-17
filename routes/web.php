@@ -21,12 +21,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
 Route::middleware(['auth'])->group(function () {
 	Route::get('/home', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('home');
     Route::post('/task/store', [TaskController::class ,'store'])->name('task.store');
     Route::post('/task/update/{task}', [TaskController::class ,'update'])->name('task.update');
     Route::get('/task/completed/{task}', [TaskController::class ,'completed'])->name('task.completed');
     Route::get('/task/pending/{task}', [TaskController::class ,'pending'])->name('task.pending');
-
 });

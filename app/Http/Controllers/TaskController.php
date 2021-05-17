@@ -13,10 +13,17 @@ class TaskController extends Controller
 {
     use ModuleBaseEntities;
 
+    /**
+     * Which Controller Helper Service Class.
+     *
+     * @var \App\Services\TaskService
+     */
     protected $service;
 
     /**
      * Create a new controller instance.
+     *
+     * @param  \App\Services\TaskService  $service
      *
      * @return void
      */
@@ -27,30 +34,10 @@ class TaskController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \App\Http\Requests\TaskStoreRequest  $request
+     * @return array|\Inertia\Response
      */
     public function store(TaskStoreRequest $request)
     {
@@ -63,33 +50,11 @@ class TaskController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  \App\Http\Requests\TaskStoreRequest  $request
+     * @param  \App\Models\Task  $task
+     * @return array|\Inertia\Response
      */
     public function update(TaskStoreRequest $request, Task $task)
     {
@@ -102,22 +67,10 @@ class TaskController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Update the specified task as completed.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  \App\Models\Task  $task
+     * @return array|\Inertia\Response
      */
     public function completed(Task $task)
     {
@@ -131,11 +84,10 @@ class TaskController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified task as pending.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  \App\Models\Task  $task
+     * @return array|\Inertia\Response
      */
     public function pending(Task $task)
     {

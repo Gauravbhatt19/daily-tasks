@@ -21,7 +21,11 @@ class Task extends Model
         'task_date'
     ];
 
-
+    /**
+     * Defining Polymorphic relationship with Model User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany|null
+     */
     public function user()
     {
         return $this->morphedByMany('App\Models\User', 'model', 'model_has_tasks');

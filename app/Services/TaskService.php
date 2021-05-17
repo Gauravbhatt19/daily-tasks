@@ -8,6 +8,12 @@ use Carbon\Carbon;
 
 class TaskService
 {
+    /**
+     * Store a newly created Task in storage.
+     *
+     * @param  array  $data
+     * @return \App\Models\Task
+     */
     public function store(array $data)
     {
         $taskDate = isset($data['taskdate']) && $data['taskdate']!=null?Carbon::createFromFormat('d M Y', $data['taskdate']):Carbon::now();
@@ -23,6 +29,13 @@ class TaskService
         ]);
         return $task;
     }
+
+    /**
+     * Update the specified Task in storage.
+     *
+     * @param  array  $data
+     * @return \App\Models\Task
+     */
     public function update(array $data, Task $task)
     {
         $task->update([
@@ -31,6 +44,13 @@ class TaskService
         ]);
         return $task;
     }
+
+    /**
+     * Update the specified Task as pending/completed in storage.
+     *
+     * @param  array  $data
+     * @return \App\Models\Task
+     */
     public function toggle(Task $task, $action = 'completed')
     {
         $task->update([

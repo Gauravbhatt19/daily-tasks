@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use App\Traits\ModuleBaseEntities;
 use Inertia\Inertia;
-use App\Services\ResetPasswordService;
 
 class ResetPasswordController extends Controller
 {
@@ -34,23 +33,11 @@ class ResetPasswordController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
-    protected $service;
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct(ResetPasswordService $service)
-    {
-        $this->service = $service;
-    }
-    
     /**
      * Reset the given user's password.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     * @param  \App\Http\Requests\PasswordUpdateRequest  $request
+     * @return \Inertia\Response
      */
     public function reset(PasswordUpdateRequest $request)
     {
@@ -78,6 +65,14 @@ class ResetPasswordController extends Controller
 
     }
 
+    /**
+     * Display the password reset view for the given token.
+     *
+     * If no token is present, display the link request form.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return string|\Inertia\Response
+     */
     public function showResetForm(Request $request)
     {
         return $this->returnFormattedResponse(function () use ($request) {

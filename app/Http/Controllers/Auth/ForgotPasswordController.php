@@ -18,13 +18,17 @@ class ForgotPasswordController extends Controller
     |
     | This controller is responsible for handling password reset emails and
     | includes a trait which assists in sending these notifications from
-    | your application to your users. Feel free to explore this trait.
+    | your application to your users.
     |
     */
 
     use SendsPasswordResetEmails, ModuleBaseEntities;
 
-
+    /**
+     * Display the form to request a password reset link.
+     *
+     * @return string|\Inertia\Response
+     */
     public function showLinkRequestForm()
     {
         return $this->returnFormattedResponse(function () {
@@ -37,8 +41,8 @@ class ForgotPasswordController extends Controller
     /**
      * Send a reset link to the given user.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     * @param  \App\Http\Requests\PasswordResetRequest  $request
+     * @return \Inertia\Response
      */
     public function sendResetLinkEmail(PasswordResetRequest $request)
     {

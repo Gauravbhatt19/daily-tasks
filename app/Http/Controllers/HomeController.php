@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 class HomeController extends Controller
 {
     use ModuleBaseEntities;
+
     /**
      * Create a new controller instance.
      *
@@ -27,13 +28,8 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return array|\Inertia\Response
      */
-    public function index()
-    {
-        return view('home');
-    }
-    
     public function dashboard()
     {
         $this->authorize('home', [Task::class] );

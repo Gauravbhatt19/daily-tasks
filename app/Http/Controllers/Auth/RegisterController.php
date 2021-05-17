@@ -27,6 +27,11 @@ class RegisterController extends Controller
 
     use RegistersUsers, ModuleBaseEntities;
 
+    /**
+     * Which Controller Helper Service Class.
+     *
+     * @var \App\Services\RegisterService
+     */
     protected $service;
 
     /**
@@ -39,6 +44,8 @@ class RegisterController extends Controller
     /**
      * Create a new controller instance.
      *
+     * @param  \App\Services\RegisterService  $service
+     *
      * @return void
      */
     public function __construct(RegisterService $service)
@@ -47,6 +54,11 @@ class RegisterController extends Controller
         $this->service = $service;
     }
 
+    /**
+     * Show the application registration form.
+     *
+     * @return string|\Inertia\Response
+     */
     public function showRegistrationForm()
     {
         return $this->returnFormattedResponse(function () {
@@ -56,6 +68,12 @@ class RegisterController extends Controller
         });
     }
 
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param  \App\Http\Requests\UserRegisterRequest  $request
+     * @return  \App\Models\User|\Inertia\Response
+     */
     public function register(UserRegisterRequest $request)
     {
         $user = $this->service->create($request->validated());

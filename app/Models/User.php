@@ -42,11 +42,22 @@ class User extends Authenticatable
         'userid_verified_at' => 'datetime',
     ];
 
+    /**
+     * Get the e-mail address where password reset links are sent.
+     *
+     * @return string
+     */
     public function getEmailForPasswordReset()
     {
         return $this->userid;
     }
 
+    /**
+     * Get the notification routing information for the given driver.
+     *
+     * @param  string  $driver
+     * @return mixed
+     */
     public function routeNotificationFor($driver)
     {
         if (method_exists($this, $method = 'routeNotificationFor'.Str::studly($driver))) {
@@ -61,6 +72,11 @@ class User extends Authenticatable
         }
     }
 
+    /**
+     * Defining Polymorphic relationship with Model Task
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany|null
+     */
     public function tasks()
     {
         return $this->morphToMany('App\Models\Task', 'model', 'model_has_tasks');
