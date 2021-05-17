@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\User;
 use Auth;
+
 class LoginService
 {
 
@@ -11,7 +12,7 @@ class LoginService
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\Models\User
+     * @return \App\Models\User|boolean
      */
     public function validateUserLogin(array $data)
     {
