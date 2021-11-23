@@ -57,6 +57,9 @@
 ```bash
 	php artisan scribe:generate
 ```
+<br />
+
+#### [API Documentation](https://dailytasks.spiders.co.in/docs)
 
 <br />
 
