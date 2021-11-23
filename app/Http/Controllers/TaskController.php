@@ -34,10 +34,11 @@ class TaskController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created task in storage.
      *
      * @param  \App\Http\Requests\TaskStoreRequest  $request
      * @return array|\Inertia\Response
+     * @authenticated
      */
     public function store(TaskStoreRequest $request)
     {
@@ -50,11 +51,12 @@ class TaskController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified task in storage.
      *
      * @param  \App\Http\Requests\TaskStoreRequest  $request
      * @param  \App\Models\Task  $task
      * @return array|\Inertia\Response
+     * @authenticated
      */
     public function update(TaskStoreRequest $request, Task $task)
     {
@@ -71,6 +73,7 @@ class TaskController extends Controller
      *
      * @param  \App\Models\Task  $task
      * @return array|\Inertia\Response
+     * @authenticated
      */
     public function completed(Task $task)
     {
@@ -88,6 +91,7 @@ class TaskController extends Controller
      *
      * @param  \App\Models\Task  $task
      * @return array|\Inertia\Response
+     * @authenticated
      */
     public function pending(Task $task)
     {

@@ -17,18 +17,17 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-
 Route::post('/login', [LoginController::class, 'login']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
+    /**
+     * Revoke all user's tokens.
+     * @authenticated
+     */
     Route::get('/revoke/tokens', function (Request $request) {
         return ['revokedTokens' => $request->user()->tokens()->delete()];
     });
-    Route::get('/dashboard', [HomeController::class, 'dashboard']);
+    Route::get('/data', [HomeController::class, 'dashboard']);
 
     Route::post('/task/store', [TaskController::class ,'store']);
     Route::post('/task/update/{task}', [TaskController::class ,'update']);

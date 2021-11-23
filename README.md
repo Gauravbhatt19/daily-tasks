@@ -50,6 +50,13 @@
 	```bash
 		npm run production
 	```
+<br />
+
+#### Run the command to generate API Docs
+
+```bash
+	php artisan scribe:generate
+```
 
 <br />
 
