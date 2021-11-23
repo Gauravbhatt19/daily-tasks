@@ -26,9 +26,10 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show user's data.
      *
      * @return array|\Inertia\Response
+     * @authenticated
      */
     public function dashboard()
     {

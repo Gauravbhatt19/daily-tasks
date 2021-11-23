@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Inertia\Inertia;
+use Illuminate\Http\Request;
+use App\Services\LoginService;
+use App\Traits\ModuleBaseEntities;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserLoginRequest;
 use App\Providers\RouteServiceProvider;
-use App\Services\LoginService;
-use App\Traits\ModuleBaseEntities;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Inertia\Inertia;
 
 class LoginController extends Controller
 {
@@ -77,8 +78,10 @@ class LoginController extends Controller
     public function login(UserLoginRequest $request)
     {
         $user = $this->service->validateUserLogin($request->validated());
+  
         return $this->returnFormattedResponse(function () use ($user) {
-            return $user;
+            $token = $user->createToken('authenticated-api-access');
+            return ['token' => $token->plainTextToken];
         }, function () use ($user) {
             if (!$user) {
                 return back()->withErrors(["invalid_credentials"=>"Invalid Email/phone no. or password!"]);
