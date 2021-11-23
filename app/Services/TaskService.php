@@ -19,7 +19,7 @@ class TaskService
         $taskDate = isset($data['taskdate']) && $data['taskdate']!=null?Carbon::createFromFormat('d M Y', $data['taskdate']):Carbon::now();
         $task = Task::create([
             'name' => $data['taskname'],
-            'description' => $data['taskdescription'],
+            'description' => $data['taskdescription'] ?? '',
             'task_date' => $taskDate
         ]);
         $modelTask=ModelTask::create([
@@ -27,7 +27,7 @@ class TaskService
             'model_id' => auth()->user()->id,
             'model_type' => get_class(auth()->user())
         ]);
-        return $task;
+        return ['success' => true, 'task' => $task];
     }
 
     /**
@@ -38,11 +38,12 @@ class TaskService
      */
     public function update(array $data, Task $task)
     {
-        $task->update([
-            'name' => $data['taskname'],
-            'description' => $data['taskdescription']
-        ]);
-        return $task;
+        $updatedTask['name'] = $data['taskname'];
+        if (isset($data['taskdescription']) && !empty(isset($data['taskdescription']))) {
+            $updatedTask['name'] = $data['taskdescription'];
+        }
+        $task->update($updatedTask);
+        return ['success' => true, 'task' => $task];
     }
 
     /**
@@ -56,7 +57,7 @@ class TaskService
         $task->update([
             'completed_at' => $action === 'completed' ? Carbon::now() : null,
         ]);
-        return $task;
+        return ['success' => true, 'task' => $task];
     }
 
 }
