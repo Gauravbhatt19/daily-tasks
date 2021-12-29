@@ -78,10 +78,12 @@ class LoginController extends Controller
     public function login(UserLoginRequest $request)
     {
         $user = $this->service->validateUserLogin($request->validated());
-  
         return $this->returnFormattedResponse(function () use ($user) {
+            if (!$user) {
+                return ["success" => false, "message" => "Invalid Email/phone no. or password!"];
+            }
             $token = $user->createToken('authenticated-api-access');
-            return ['token' => $token->plainTextToken];
+            return [ "success" => true, "token" => $token->plainTextToken];
         }, function () use ($user) {
             if (!$user) {
                 return back()->withErrors(["invalid_credentials"=>"Invalid Email/phone no. or password!"]);
