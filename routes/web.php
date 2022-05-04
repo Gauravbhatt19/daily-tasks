@@ -21,6 +21,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/privacy-policy', [App\Http\Controllers\HomeController::class, 'privacy'])->name('privacy');
+Route::get('/termsandconditions', [App\Http\Controllers\HomeController::class, 'termsandconditions'])->name('termsandconditions');
+
 Route::middleware(['auth'])->group(function () {
 	Route::get('/home', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('home');
     Route::post('/task/store', [TaskController::class ,'store'])->name('task.store');

@@ -22,7 +22,11 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth',
+            ['except' => [
+                'privacy', 'termsandconditions'
+            ]]
+        );
     }
 
     /**
@@ -34,7 +38,7 @@ class HomeController extends Controller
     public function dashboard()
     {
         $this->authorize('home', [Task::class] );
-        $data['date'] = Carbon::now()->toDateString();
+        $data['date'] = request()->has('date')? Carbon::createFromFormat('d M Y', request()->get('date')): Carbon::now()->toDateString();
         if ( request()->has('date') && request()->has('action') ) {
             $data['date'] = request()->get('action') === "prev" ?
                             Carbon::createFromFormat('d M Y', request()->get('date'))->subDay() :
@@ -58,6 +62,36 @@ class HomeController extends Controller
             return $data;
         }, function () use ($data) {
             return Inertia::render('Home', $data);
+        });
+
+    }
+
+    /**
+     * Show Privacy Policy Page
+     *
+     * @return array|\Inertia\Response
+     */
+    public function privacy()
+    {
+        return $this->returnFormattedResponse(function () {
+            return 'Privacy Policy';
+        }, function () {
+            return Inertia::render('Privacy');
+        });
+
+    }
+
+    /**
+     * Show Terms and Conditions Page
+     *
+     * @return array|\Inertia\Response
+     */
+    public function termsandconditions()
+    {
+        return $this->returnFormattedResponse(function () {
+            return 'Terms and Conditions';
+        }, function () {
+            return Inertia::render('TermsAndConditions');
         });
 
     }

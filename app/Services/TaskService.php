@@ -40,7 +40,7 @@ class TaskService
     {
         $updatedTask['name'] = $data['taskname'];
         if (isset($data['taskdescription']) && !empty(isset($data['taskdescription']))) {
-            $updatedTask['name'] = $data['taskdescription'];
+            $updatedTask['description'] = $data['taskdescription'];
         }
         $task->update($updatedTask);
         return ['success' => true, 'task' => $task];

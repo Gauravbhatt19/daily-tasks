@@ -79,7 +79,7 @@ class RegisterController extends Controller
         $user = $this->service->create($request->validated());
         Auth::login($user);
         return $this->returnFormattedResponse(function () use ($user) {
-            return $user;
+            return ["success" => true, "user" => $user];
         }, function () use ($user) {
             return redirect()->route('home');
         });
